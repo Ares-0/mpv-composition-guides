@@ -1,5 +1,5 @@
 ## MPV Composition Guides
-This script overlays basic composition guides to your mpv video. 
+This script overlays basic composition guides on your mpv video. 
 
 ### Installation
 Put the entire folder in your ~/mpv/scripts/ directory such that you have ~/mpv/scripts/composition_guides (or however you rename the folder). Do not rearrange individual files or directories.  
