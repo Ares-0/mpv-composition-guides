@@ -2,7 +2,7 @@
 This script overlays basic composition guides on your mpv video. 
 
 ### Installation
-Put the entire folder in your ~/mpv/scripts/ directory such that you have ~/mpv/scripts/composition_guides (or however you rename the folder). Do not rearrange individual files or directories.  
+Scripts are usually placed in ~/.mpv/scripts/ (macOS/Linux) or %AppData%\mpv\scripts\ (Windows). Put the entire folder in this directory. Do not rearrange individual files or directories.  
 See: https://mpv.io/manual/master/#lua-scripting and https://github.com/mpv-player/mpv/wiki/User-Scripts  
 
 ### Usage  
