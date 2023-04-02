@@ -22,10 +22,10 @@ To remove the feedback in the top left, in main.lua change variable "verbose" to
 To change what key the script uses, in main.lua change the variable "key".
 To disable automatic keybinding, in main.lua change the variable "key" to nil
 
-To add hooks to input.conf, use the function names cycle_guide, clear_guide, set_43. For example:
-h script-binding cycle_guide
-Alt+q script-binding clear_guide
-Ctrl+m script-binding set_43
+To add hooks to input.conf, use the function names comp_guide_cycle, comp_guide_clear, and comp_guide_43. For example:
+h script-binding comp_guide_cycle
+Alt+q script-binding comp_guide_clear
+Ctrl+m script-binding comp_guide_43
 
 If you want to add more guides, add the filename and guide name to the arrays and leave a bgra formatted file in the "guides" folder.
 

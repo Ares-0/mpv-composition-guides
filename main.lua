@@ -95,16 +95,15 @@ end
 
 -- main function of the file
 function M.main()
-	if (key ~= nil and key ~= '') then
-		mp.add_key_binding(key, M.cycle_guide)
-		mp.add_key_binding('SHIFT+' .. key, M.clear_guide)
-		mp.add_key_binding('CTRL+' .. key, M.set_43)
+	mp.add_key_binding(key, "comp_guide_cycle", M.cycle_guide)
+	mp.add_key_binding('SHIFT+' .. key, "comp_guide_clear", M.clear_guide)
+	mp.add_key_binding('CTRL+' .. key, "comp_guide_43", M.set_43)
 
-		-- Force functions if that's your style
-		-- mp.add_forced_key_binding(key, M.cycle_guide)
-		-- mp.add_forced_key_binding('SHIFT+' .. key, M.clear_guide)
-		-- mp.add_forced_key_binding('CTRL+' .. key, M.set_43)
-	end
+	-- Force functions if that's your style
+	-- mp.add_forced_key_binding(key, "comp_guide_cycle", M.cycle_guide)
+	-- mp.add_forced_key_binding('SHIFT+' .. key, "comp_guide_clear", M.clear_guide)
+	-- mp.add_forced_key_binding('CTRL+' .. key, "comp_guide_43", M.set_43)
+
 end
 
 mp.register_event("file-loaded", M.main)
