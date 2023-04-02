@@ -2,7 +2,9 @@
 This script overlays basic composition guides on your mpv video. 
 
 ### Installation
-Scripts are usually placed in ~/.mpv/scripts/ (macOS/Linux) or %AppData%\mpv\scripts\ (Windows). Put the entire folder in this directory. Do not rearrange individual files or directories.  
+Scripts are usually placed in ~/.mpv/scripts/ (macOS/Linux) or %AppData%\mpv\scripts\ (Windows).  
+Put the entire downloaded folder in this directory. Do not rearrange individual files or directories.  
+The name of the directory is irrelevant, as long as ...\scripts\whatever\main.lua is preserved, it should work.  
 See: https://mpv.io/manual/master/#lua-scripting and https://github.com/mpv-player/mpv/wiki/User-Scripts  
 
 ### Usage  
@@ -11,16 +13,23 @@ G &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reset back to no g
 CTRL g&nbsp;&nbsp;cycle between 16:9 mode and 4:3 mode  
 
 ### Notes  
-This script tries to get the correct MPV script directory, but if yours is different, just put the correct one in main.lua line 27.  
-The 4:3 ones may look a tad wonky because they're just scaled down, but everything lines up appropriately.  
 Everything breaks when you're not full screen btw, and that's not really a fixable issue; that's just how MPV / this script works.  
+The 4:3 ones may look a tad wonky because of the scaling, but everything lines up appropriately
 
 ### 'Advanced'  
-To remove the feedback in the top left, change variable "verbose" to false.  
-To change what key the script uses, change the variable "key".  
-If you want to add more guides, add the filename and guide name to the arrays and leave a bgra formatted file in the "guides" folder.  
+To remove the feedback in the top left, in main.lua change variable "verbose" to false.  
 
-Bother MasterofAres#1755 on discord if something breaks
+To change what key the script uses, in main.lua change the variable "key".  
+To disable automatic keybinding, in main.lua change the variable "key" to nil  
+
+To add hooks to input.conf, use the function names cycle_guide, clear_guide, set_43. For example:  
+h script-binding cycle_guide  
+Alt+q script-binding clear_guide  
+Ctrl+m script-binding set_43  
+
+If you want to add more guides, add the filename and guide name to the arrays and leave a bgra formatted file in the "guides" folder.
+
+Open an issue or bother MasterofAres#1755 on discord if something breaks
 
 
 ### Images
